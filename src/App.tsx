@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import foneng from "./langMaps/foneng";
 import { Keyboard } from "./components/Keyboard/Keyboard";
-import { SearchIPADB } from "./components/Keyboard/SearchIPADB/SearchIPADB";
+import { SearchIPADB } from "./components/SearchIPADB/SearchIPADB";
 
 function App() {
   const [inputCharacters, setInputCharacters] = useState<
