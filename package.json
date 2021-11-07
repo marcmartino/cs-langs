@@ -2,7 +2,7 @@
   "name": "cs-lang-phon",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cs-lang.marmar.io",
+  "homepage": "https://cs-langs.marmar.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -22,8 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn build && yarn gen:build-copies",
-    "deploy": "echo 'cs-lang.marmar.io' > ./build/CNAME && gh-pages -d build"
+    "predeploy": "yarn build ",
+    "deploy": "echo 'cs-langs.marmar.io' > ./build/CNAME && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
