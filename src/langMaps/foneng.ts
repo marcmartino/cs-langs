@@ -2,7 +2,7 @@ const foneng = {
   P: "p",
   M: "m",
   V: "v",
-  J: "ʒ",
+  J: "dʒ",
   // greek phi
   φ: "ʒ",
   // cyrillic hwe

@@ -11,12 +11,16 @@ export const SearchIPADB: FC<Props> = ({ search }) => {
   const foundPhons: string[] = phonsByLen[search.length][search] || [];
   return (
     <div>
-      <div>{search}</div>
       <ul>
         {foundPhons.map((word: string) => (
           <li key={word}>{word}</li>
         ))}
       </ul>
+      {search.length && !foundPhons.length ? (
+        <span>No Words Found</span>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
