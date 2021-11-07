@@ -1,0 +1,66 @@
+const foneng = {
+  P: "p",
+  M: "m",
+  V: "v",
+  J: "ʒ",
+  // greek phi
+  φ: "ʒ",
+  // cyrillic hwe
+  ꚕ: "ð",
+  T: "t",
+  N: "n",
+  R: "r",
+  Z: "z",
+  K: "k",
+  // cyrillic be
+  Б: "ɒ",
+  // greek lambda
+  Λ: "ʌ",
+  // cyrillic che
+  Ч: "a",
+  // this one is most likely not the correct letter but close enough
+  e: "ɛ",
+  A: "eɪ",
+  // not perf but backwards s
+  Ƨ: "ɪə",
+  Ь: "ɔɪ",
+  O: "əʊ",
+  // georgian ghan
+  Ⴖ: "ʊ",
+  // hebrew nun - not close enough
+  נ: "ʊə",
+  U: "u ː",
+  B: "b",
+  F: "f",
+  W: "w",
+  X: "tʃ",
+  C: "ʃ",
+  // greek theta
+  ϴ: "θ",
+  D: "d",
+  L: "l",
+  S: "s",
+  Y: "j",
+  G: "g",
+  // Cyrillic e
+  Э: "ɔ",
+  // Latin schwa - partial differential would be another option
+  ә: "əˈ",
+  // Greek gamma
+  Γ: "ɪ",
+  I: "ʌɪ",
+  // Georgian vin
+  ვ: "ɛː",
+  E: "iː",
+  // this should be a reversed 2 symbol
+  ς: "aʊ",
+  // Greek reversed sigma
+  "Ͻ ": "ɔː",
+  // Quincunx
+  "⚻": "əː",
+  // ocr chair
+  "⑁": "ŋ",
+  H: "ˈh",
+} as const;
+
+export default foneng;

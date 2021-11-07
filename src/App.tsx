@@ -1,23 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import foneng from "./langMaps/foneng";
+import { Keyboard } from "./components/Keyboard/Keyboard";
+import { SearchIPADB } from "./components/Keyboard/SearchIPADB/SearchIPADB";
 
 function App() {
+  const [inputCharacters, setInputCharacters] = useState<
+    (keyof typeof foneng)[]
+  >([]);
+  const inputText = inputCharacters.join("");
+  const inputIpa = inputCharacters.map((l) => foneng[l]).join("");
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <input style={{ fontSize: "1.5rem" }} readOnly value={inputText} />
+        <Keyboard
+          langMap={foneng}
+          onPress={({ letter }) =>
+            setInputCharacters((inputCharacters) => {
+              switch (letter) {
+                case "backspace":
+                  return inputCharacters.length <= 1
+                    ? []
+                    : inputCharacters.slice(0, -1);
+
+                default:
+                  return [...inputCharacters, letter];
+              }
+            })
+          }
+        />
+
+        {inputCharacters.length > 0 && <div>/{inputIpa}/</div>}
+        <SearchIPADB search={inputIpa} />
       </header>
     </div>
   );
